@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>seoyoungjin23</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+        <style>
+            * {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            
+            div.container {overflow: hidden;}
+            .title{
+                float: left;
+                margin: 0 5px;
+                padding: 15px;
+            }
+            .nav {
+                float: right;
+                margin: 0 5px;
+                padding: 20px;
+                text-decoration: none;
+                color: black;
+            }
+            .page {
+                display: none;
+                margin: 0 auto; width: 1000px;
+                overflow: hidden;
+            }
+            .home1 {
+                float: left;
+                width: 600px;
+                line-height: 25px;
+            }
+            .home2 {
+                float: left;
+                width: 300px;
+                margin-top: 30px;
+                margin-left: 50px;
+            }
+            #drama h1 {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            #drama p {
+                width: 820px;
+                line-height: 25px;
+            }
+            #travel h1 {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            #travel p {
+                line-height: 25px;
+            }
+
+            @media screen and (max-width: 820px) {
+                .title {float: none;}
+                .nav {float: none; display: inline-block;}
+                .page {width: auto;}
+                .home1 {width: auto;}
+                .home2 {width: auto; margin-left: 0;}
+                #drama p {width: auto;}
+                #travel p {width: auto;}
+                #travel img {width: 300px; height: 300px;}
+            }
+            @media screen and (max-width: 413px) {
+                #drama img {width: 370px; height: 280px;}
+            }
+            @media screen and (max-width: 280px) {
+                #drama img {width: 270px; height: 250px;}
+                #travel img {width: 270px; height: 270px;}
+            }
+
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#home').css('display', 'block');
+              
+                $('.nav').click(function(event) {
+                  event.preventDefault();
+                  var showpg = $(this).attr('href');
+                  $('.page').css('display', 'none');
+                  $(showpg).css('display', 'block');
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2 class="title">YoungJin's page</h2>
+            <a class="nav" href="#travel"><b>Travel</b></a>
+            <a class="nav" href="#drama"><b>Drama</b></a>
+            <a class="nav" href="#home"><b>HOME</b></a>
+        </div>
+        <hr><br><br>
+
+        <div class="page" id="home">
+            <div class="home1">
+                <h1>YoungJin Seo</h1>
+                <p>
+                    I am a student at the Department of Computer Science and Engineering at Kangwon National University.
+                    I was interested in the Internet of Things, so I entered the Department of Computer Engineering.
+                    However, I have recently been interested in AI, so I am studying machine learning and deep learning.
+                </p><br>
+                <h2>Interest</h2>
+                <p>
+                    My hobby is watching dramas. Among them, my favorite genre is romance. Lately, I like quiet dramas that are healing.
+                    To recommend a few, I recommend '슬기로운 의사생활' and '멜로가 체질'.
+                    And I really like to travel. So far, I have traveled to various places such as Dubai,
+                    Japan, and Kota Kinabalu, and I want to travel to more places in the future.
+                </p>
+            </div>
+            <div class="home2"><img src="img.jpg" width="200" height="300"></div>
+        </div>
+
+        <div class="page" id="drama">
+
+            <h1>recommendation</h1>
+            
+            <div class="drama1">
+                <h2>슬기로운 의사생활</h2>
+                <img src="drama1.webp" width="400" height="250">
+                <p><b>
+                    슬기로운 의사생활은 99학번 의사동기 5명이 같은 병원에서 일하면서 일어나는 여러 에피소드를 다루고 있다. 내가 이 드라마를
+                    추천하는 이유는 드라마 속 사람들에게서 따뜻한 마음을 느낄 수 있기 때문이다. 환자를 배려하는 의사의 마음, 그런 고생하는 의사를 배려하는 환자의 마음
+                    등 각 에피소드마다 크고 작은 기쁨과 감동을 전해준다.
+                    자극적인 것만 추구하고 각박한 사회에서 마음을 힐링할 수 있는 포근한 드라마이다.
+                </b></p>
+            </div>
+            
+            <div class="drama2">
+                <h2>멜로가 체질</h2>
+                <div><img src="drama2.webp" width="400" height="250"></div>
+                <p><b>
+                    멜로가 체질은 이제 서른 살이 된 여자들의 고민, 연애, 일상을 담은 로맨스 코미디이다. 참신한 대사와 기상천외한 ppl 방법 그리고 캐릭터간의 케미까지
+                    보고 있으면 웃음이 끊이질 않는 재밌는 드라마이다.
+                </b></p>
+            </div>
+        </div>
+
+        <div class="page" id="travel">
+            <h1>Travel journal</h1>
+
+            <div class="travel1">
+                <h3>(2022.11.23) ~ (2022.11.28) 일본 여행</h3>
+                <h4>교토 - 아름다움과 고요함이 어우러진 일본의 문화 수도</h4>
+                <img src="jp1.jpg" width="400" height="400" style="margin-right: 100px;">
+                <img src="jp2.jpg" width="400" height="400">
+                <p><b>전역 후 다녀온 첫 여행지 가는 곳마다 펼쳐지는 아름다운 풍경과 고요함이 매력적인 곳
+                    혼자 산책하며 사색에 빠지기 좋은 지역
+                </b></p>
+            </div>
+            
+            
+        </div>
+
+
+    </body>
+</html>
